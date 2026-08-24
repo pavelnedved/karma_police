@@ -1,0 +1,131 @@
+{
+  "observations": [
+    {
+      "id": "o1",
+      "text": "Sale items (marked with a red tag) are final sale and are not eligible for return or exchange for any reason."
+    },
+    {
+      "id": "o2",
+      "text": "Items that arrive damaged or defective may be returned within 14 days of delivery for a full refund or replacement, regardless of item condition upon return."
+    },
+    {
+      "id": "o3",
+      "text": "Standard-price items may be returned within 30 days of delivery for a full refund, provided the item is unused and in its original packaging."
+    },
+    {
+      "id": "o4",
+      "text": "Refunds are issued to the original payment method within 5-7 business days of us receiving the returned item."
+    }
+  ],
+  "definitions": [
+    {
+      "id": "d1",
+      "term": "red-tag sale item",
+      "text": "Per the policy's parenthetical, a 'sale item' is one marked with a red tag. The user's item is described as a red-tag sale item, so it falls within the class addressed by clause 2."
+    },
+    {
+      "id": "d2",
+      "term": "arrives damaged",
+      "text": "Clause 3 addresses items that 'arrive damaged or defective' \u2014 i.e., damage present at delivery rather than caused later by the buyer. Damage occurring in shipping is damage present on arrival."
+    }
+  ],
+  "assumptions": [
+    {
+      "id": "a1",
+      "text": "The item was delivered on or around the date of purchase 10 days ago, so it is within 14 days of delivery.",
+      "why_needed": "Both clauses 2 and 3 count time from delivery, but the user gave a purchase date ('bought ... 10 days ago'), not a delivery date. If delivery lagged purchase, the item is even more comfortably inside 14 days; if the user misremembered and delivery was earlier, the window could matter. Needed to evaluate the timing element at all."
+    },
+    {
+      "id": "a2",
+      "text": "No assumption is made about which of clause 2 and clause 3 prevails; the knowledge base is treated as silent on their interaction.",
+      "why_needed": "Clause 2 excludes red-tag items from return 'for any reason'; clause 3 permits return of damaged items with no stated exception for sale items. Both apply to this exact situation and the policy never states a precedence rule. Silently choosing one would fabricate a rule the source does not contain."
+    }
+  ],
+  "backed_claims": [
+    {
+      "id": "b1",
+      "text": "The item falls simultaneously within the scope of clause 2 (red-tag sale item) and clause 3 (arrived damaged, within 14 days of delivery).",
+      "derived_from": [
+        "o1",
+        "o2",
+        "d1",
+        "d2",
+        "a1"
+      ],
+      "falsification_path": "Show the item was not red-tagged, or that the damage was buyer-caused after delivery rather than present on arrival, or that delivery occurred more than 14 days ago."
+    },
+    {
+      "id": "b2",
+      "text": "The policy as written does not resolve the conflict: it contains no precedence clause, no 'except' language in clause 3 carving out sale items, and no 'notwithstanding' language in clause 2 yielding to clause 3.",
+      "derived_from": [
+        "o1",
+        "o2",
+        "o3",
+        "o4"
+      ],
+      "falsification_path": "Point to any text in the policy establishing precedence between clauses, or an exception in either clause referencing the other."
+    },
+    {
+      "id": "b3",
+      "text": "Clause 1's condition requirements (unused, original packaging) are not an obstacle here, because clause 3 explicitly waives return condition and clause 1 applies to standard-price items.",
+      "derived_from": [
+        "o2",
+        "o3"
+      ],
+      "falsification_path": "Show that clause 1's conditions are intended to apply to all returns including damaged-item returns."
+    },
+    {
+      "id": "b4",
+      "text": "If the return is accepted, the refund would go to the original payment method within 5-7 business days of the retailer receiving the item.",
+      "derived_from": [
+        "o4"
+      ],
+      "falsification_path": "A separate policy term excluding sale items or damaged-item returns from the standard refund mechanics."
+    }
+  ],
+  "unverified_claims": [
+    {
+      "id": "u1",
+      "text": "Damage-on-arrival overrides final-sale status, so the return is permitted.",
+      "status": "unverified"
+    },
+    {
+      "id": "u2",
+      "text": "'Final sale ... for any reason' is absolute and defeats the damaged-goods clause, so the return is refused.",
+      "status": "unverified"
+    },
+    {
+      "id": "u3",
+      "text": "The retailer has any obligation outside this policy (e.g. statutory consumer protection, carrier shipping-damage claims) that would independently entitle the buyer to a refund.",
+      "status": "unverified"
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "h1",
+      "text": "Proceeding on the reading that clause 3 governs, because it is the more specific provision (it addresses a narrow factual trigger \u2014 damage on arrival \u2014 and expressly overrides an otherwise-general return condition, 'regardless of item condition upon return'), while clause 2 states a general status-based bar. Under this reading the refund is owed.",
+      "falsification_path": "A retailer ruling, an order-page disclaimer, or a policy version stating that final-sale status applies even to damaged goods; or confirmation from Northgate that clause 2 is intended as an absolute bar. Conversely, confirmation that clause 3 has no sale-item exception would support it.",
+      "easily_falsifiable": true
+    },
+    {
+      "id": "h2",
+      "text": "The phrase 'for any reason' in clause 2 was drafted to defeat buyer-preference reasons (changed mind, wrong size, fit) rather than to disclaim liability for goods damaged before the buyer ever received them.",
+      "falsification_path": "Evidence of drafting intent or prior enforcement showing Northgate has refused damaged-on-arrival red-tag returns.",
+      "easily_falsifiable": false
+    }
+  ],
+  "conclusion": {
+    "text": "The policy as written does not settle your case \u2014 it collides with itself. Your item is squarely covered by two clauses at once: clause 2 says red-tag sale items are 'not eligible for return or exchange for any reason,' and clause 3 says items that arrive damaged may be returned within 14 days for a full refund or replacement, with no stated exception for sale items. You are inside the 14-day window (assuming delivery was at/near your purchase date 10 days ago), and clause 3 expressly waives any condition-on-return requirement, so nothing else blocks you. The policy contains no precedence rule, so I cannot tell you definitively which clause wins. My working read \u2014 flagged as a hypothesis, not a backed answer \u2014 is that clause 3 should govern, since it is the specific damaged-on-arrival carve-out and already overrides other general conditions, whereas clause 2 is a general status bar most naturally aimed at buyer's-remorse returns. On that read you would get a full refund or replacement, issued to your original payment method 5-7 business days after they receive the item. But you should get Northgate to confirm which clause they apply, because a reading where 'for any reason' is absolute is equally available on this text.",
+    "backed": false,
+    "supporting_ids": [
+      "b1",
+      "b2",
+      "b3",
+      "b4",
+      "a1",
+      "a2",
+      "h1",
+      "h2"
+    ]
+  }
+}

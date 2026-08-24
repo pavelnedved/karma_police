@@ -1,0 +1,29 @@
+{
+  "flags": [
+    {
+      "item_id": "b2",
+      "category": "unlabeled_leap",
+      "reasoning": "b2 is derived_from o2 alone, but o2 says nothing about this particular purchase. The factual premise 'the purchase was made 10 days ago' appears nowhere in the observations, definitions, or assumptions \u2014 it is smuggled into a backed_claim as if it followed from the policy text. Additionally, o2 measures the 14-day window from *delivery*, while b2 measures it from *purchase*; equating the two is a second unlabeled inferential step (an item purchased 10 days ago could have been delivered on any later date, or the shipping time could push/pull the window). The falsification path only tests the policy-side condition ('purchased more than 14 days ago'), never the delivery-vs-purchase substitution.",
+      "severity": "high"
+    },
+    {
+      "item_id": "conclusion",
+      "category": "unlabeled_leap",
+      "reasoning": "The conclusion asserts as established fact that 'your item is within that 14-day window (10 days)'. This inherits the unsupported 10-day premise and the purchase-vs-delivery conflation from b2, and no supporting_id (b1, b2, a1, h1) traces back to an observation containing the order date or delivery date. The conclusion also refers to 'rule 2' and 'rule 3' while the observation set is labeled o1-o3, so the mapping between cited rules and recorded observations is not actually verifiable from the artifact.",
+      "severity": "medium"
+    },
+    {
+      "item_id": "a1",
+      "category": "misclassified_observation",
+      "reasoning": "a1 is stated as an assumption but its content is a checkable fact about the source document \u2014 that the policy contains no clause addressing damaged final-sale items. That is verifiable by reading the policy (same kind of evidence as o1-o3), not something assumed. Labeling it an assumption is the conservative direction, but it hides that the entire 'unresolvable conflict' framing rests on a claim about document contents that should be exposed as an observation open to direct refutation (e.g., an overlooked exceptions clause).",
+      "severity": "low"
+    },
+    {
+      "item_id": "h1",
+      "category": "unlabeled_leap",
+      "reasoning": "h1's reasoning rests on an empirical premise \u2014 'the more common industry practice' is that damage/defect rights survive final-sale exclusions \u2014 which appears nowhere as an observation, assumption, or backed claim. It is hedged with 'assuming', but the industry-practice premise itself is never given a falsification path; the stated falsification path only tests Northgate's specific policy, not the generalization the hypothesis leans on.",
+      "severity": "low"
+    }
+  ],
+  "assumption_recall_note": "There is a clear gap: the case facts driving the whole analysis \u2014 that the item is a red-tag sale item, that it arrived damaged, that it was purchased 10 days ago, and that delivery date can be treated as purchase date \u2014 are asserted in b2 and the conclusion without appearing as observations or assumptions anywhere in the artifact."
+}

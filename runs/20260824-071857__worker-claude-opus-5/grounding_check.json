@@ -1,0 +1,22 @@
+[
+  {
+    "id": "o1",
+    "text": "Sale items (marked with a red tag) are final sale and are not eligible for return or exchange for any reason.",
+    "grounded": true
+  },
+  {
+    "id": "o2",
+    "text": "Items that arrive damaged or defective may be returned within 14 days of delivery for a full refund or replacement, regardless of item condition upon return.",
+    "grounded": true
+  },
+  {
+    "id": "o3",
+    "text": "Standard-price items may be returned within 30 days of delivery for a full refund, provided the item is unused and in its original packaging.",
+    "grounded": true
+  },
+  {
+    "id": "o4",
+    "text": "Refunds are issued to the original payment method within 5-7 business days of us receiving the returned item.",
+    "grounded": true
+  }
+]
