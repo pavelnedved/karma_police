@@ -1,20 +1,21 @@
-"""JSON schemas for the bracket state machine's structured output."""
+"""JSON schemas used by agent_1's structured output, and by the checker that
+audits agent_1's output."""
 
-WORKER_SCHEMA = {
+BRACKET_SCHEMA = {
     "type": "object",
     "properties": {
         "observations": {
             "type": "array",
             "description": (
-                "Only what is literally present in the knowledge base. "
-                "'text' must be an exact, verbatim substring of the knowledge base "
+                "Only what is literally present in the provided context. "
+                "'text' must be an exact, verbatim substring of the context "
                 "(quote it, do not paraphrase) so it can be mechanically checked."
             ),
             "items": {
                 "type": "object",
                 "properties": {
                     "id": {"type": "string"},
-                    "text": {"type": "string", "description": "Verbatim quote from the knowledge base."},
+                    "text": {"type": "string", "description": "Verbatim quote from the context."},
                 },
                 "required": ["id", "text"],
                 "additionalProperties": False,
@@ -23,9 +24,10 @@ WORKER_SCHEMA = {
         "definitions": {
             "type": "array",
             "description": (
-                "Descriptions of a term. Must NOT be directly actionable or derive a claim on "
-                "their own — if removing this definition (keeping everything else) would still "
-                "block the claim it's used for, it's a legitimate definition, not a smuggled claim."
+                "Descriptions of a term. Must NOT be directly actionable or derive a "
+                "claim on their own — if removing this definition (keeping everything "
+                "else) would still block the claim it's used for, it's a legitimate "
+                "definition, not a smuggled claim."
             ),
             "items": {
                 "type": "object",
@@ -41,8 +43,9 @@ WORKER_SCHEMA = {
         "assumptions": {
             "type": "array",
             "description": (
-                "What fills the gap between the input (observations+definitions) and a claim "
-                "you want to reach, when the input doesn't directly derive it. Must be explicit."
+                "What fills the gap between the input (observations+definitions) and a "
+                "claim you want to reach, when the input doesn't directly derive it. "
+                "Must be explicit."
             ),
             "items": {
                 "type": "object",
@@ -61,8 +64,8 @@ WORKER_SCHEMA = {
         "backed_claims": {
             "type": "array",
             "description": (
-                "Claims derived from observations+definitions+assumptions via an explicit "
-                "logic chain. Must carry a real falsification path."
+                "Claims derived from observations+definitions+assumptions via an "
+                "explicit logic chain. Must carry a real falsification path."
             ),
             "items": {
                 "type": "object",
@@ -100,8 +103,8 @@ WORKER_SCHEMA = {
         "hypotheses": {
             "type": "array",
             "description": (
-                "Forward-looking assumptions: 'we're moving ahead, but here's a case that could "
-                "break this.' Every hypothesis must carry a falsification path."
+                "Forward-looking assumptions: 'we're moving ahead, but here's a case "
+                "that could break this.' Every hypothesis must carry a falsification path."
             ),
             "items": {
                 "type": "object",
@@ -177,9 +180,10 @@ CHECKER_SCHEMA = {
         "assumption_recall_note": {
             "type": "string",
             "description": (
-                "One sentence: does the set of assumptions+hypotheses look complete for the "
-                "reasoning shown, or is there an obvious gap the worker didn't flag as an "
-                "assumption at all (i.e. it just asserted something without labeling it)?"
+                "One sentence: does the set of assumptions+hypotheses look complete for "
+                "the reasoning shown, or is there an obvious gap the worker didn't flag "
+                "as an assumption at all (i.e. it just asserted something without "
+                "labeling it)?"
             ),
         },
     },

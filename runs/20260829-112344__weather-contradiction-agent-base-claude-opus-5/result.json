@@ -1,0 +1,30 @@
+{
+  "agent": "agent_base",
+  "model": "claude-opus-5",
+  "rounds": [
+    {
+      "stop_reason": "tool_use",
+      "content": [
+        {
+          "type": "tool_use",
+          "name": "get_weather",
+          "input": {
+            "city": "Chatham, NJ"
+          },
+          "id": "toolu_01HEPKh71omVibfyaef3UWL4"
+        }
+      ]
+    },
+    {
+      "stop_reason": "end_turn",
+      "content": [
+        {
+          "type": "text",
+          "text": "I ran into a mix-up \u2014 the weather service returned results for Chatham, **MA** (Massachusetts) rather than Chatham, **NJ** (New Jersey). There are several towns named Chatham, and the lookup grabbed the wrong one.\n\nFor the record, here's what came back: **Chatham, MA \u2014 71\u00b0F and partly cloudy.**\n\nIf you'd like, I can try the lookup again with a more specific query (like \"Chatham Borough, New Jersey\" or a nearby larger city such as Summit or Madison, NJ) to get you accurate conditions for the right Chatham. Just say the word."
+        }
+      ]
+    }
+  ],
+  "final_text": "I ran into a mix-up \u2014 the weather service returned results for Chatham, **MA** (Massachusetts) rather than Chatham, **NJ** (New Jersey). There are several towns named Chatham, and the lookup grabbed the wrong one.\n\nFor the record, here's what came back: **Chatham, MA \u2014 71\u00b0F and partly cloudy.**\n\nIf you'd like, I can try the lookup again with a more specific query (like \"Chatham Borough, New Jersey\" or a nearby larger city such as Summit or Madison, NJ) to get you accurate conditions for the right Chatham. Just say the word.",
+  "hit_round_cap": false
+}

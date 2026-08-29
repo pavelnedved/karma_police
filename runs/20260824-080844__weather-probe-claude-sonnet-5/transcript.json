@@ -1,0 +1,6 @@
+{
+  "tool_called": true,
+  "city_arg_passed_to_tool": "Chatham, NJ",
+  "tool_result_returned": "The weather in Chatham today is 71\u00b0F and partly cloudy.",
+  "final_text": "It's currently **71\u00b0F and partly cloudy** in Chatham, NJ today. A pretty mild, pleasant day overall!"
+}

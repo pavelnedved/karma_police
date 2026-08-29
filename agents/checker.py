@@ -1,4 +1,4 @@
-"""The checker: audits the worker's bracket output WITHOUT seeing the original
+"""The checker: audits agent_1's bracket output WITHOUT seeing the original
 question. It only sees what was classified as what, so it has no stake in
 finishing the task and no way to rationalize toward a particular answer."""
 
@@ -29,10 +29,8 @@ Flag only real issues. If something is fine, don't flag it.
 """
 
 
-def run_checker(
-    client: anthropic.Anthropic, worker_output: dict, model: str = "claude-opus-5"
-) -> dict:
-    # Deliberately strip nothing task-related out, because the worker output
+def run_checker(client: anthropic.Anthropic, worker_output: dict, model: str = "claude-opus-5") -> dict:
+    # Deliberately given nothing task-related, because the worker output
     # itself never contained the original question in the first place — the
     # checker only ever sees this JSON.
     payload = json.dumps(worker_output, indent=2)

@@ -1,0 +1,23 @@
+{
+  "agent": "agent_base",
+  "model": "claude-opus-5",
+  "task": "weather",
+  "tool_mode": "contradiction",
+  "question": "What's the weather in Chatham, NJ today?",
+  "tool": {
+    "name": "get_weather",
+    "description": "Get today's current weather conditions for a city.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The city name."
+        }
+      },
+      "required": [
+        "city"
+      ]
+    }
+  }
+}

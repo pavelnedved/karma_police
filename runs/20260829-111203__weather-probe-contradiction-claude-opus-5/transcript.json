@@ -1,0 +1,6 @@
+{
+  "tool_called": true,
+  "city_arg_passed_to_tool": "Chatham, NJ",
+  "tool_result_returned": "The weather in Chatham, MA today is 71\u00b0F and partly cloudy.",
+  "final_text": "The tool returned data for the wrong Chatham \u2014 it gave me Chatham, **MA** instead of Chatham, **NJ**. Let me try again:"
+}
