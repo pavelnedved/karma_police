@@ -1,0 +1,6 @@
+{
+  "version": "version_base",
+  "model": "claude-sonnet-5",
+  "task": "weather",
+  "tool_mode": "silent"
+}

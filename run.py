@@ -1,13 +1,13 @@
-"""CLI entrypoint: pick an agent, a task, a model (and a tool-mode where the
-task has one), run it, save the result, and print a summary.
+"""CLI over api.run() -- pick a version, a task, a model (and a tool-mode
+where the task has one), run it, save the result, print a summary.
 
-    python run.py --agent agent_base --task weather --model claude-sonnet-5 --tool-mode contradiction
-    python run.py --agent agent_1    --task return_policy --model claude-opus-5
+    python run.py --version version_base --task weather --model claude-sonnet-5 --tool-mode contradiction
+    python run.py --version version_1    --task return_policy --model claude-opus-5
 
-Any agent can be pointed at any task -- that's the point of this refactor.
-The bracket-schema post-processing (mechanical grounding check + blind
-checker) only runs when the agent actually produced structured bracket
-output, so it's not hardcoded to one task or one agent.
+This file owns nothing about routing (that's api.py) or execution (that's
+runner.py) -- it's argument parsing, printing, version_1-specific
+post-processing (grounding check + blind checker), and saving the audit
+trail.
 """
 
 import argparse
@@ -16,14 +16,12 @@ import sys
 
 import anthropic
 
-from agents.agent_1 import AGENT_1
-from agents.agent_base import AGENT_BASE
+import api
 from agents.checker import run_checker
 from agents.mechanical_check import check_observation_grounding
-from runner import run_agent, save_run
+from runner import save_run
 from tasks import return_policy, weather
 
-AGENTS = {"agent_base": AGENT_BASE, "agent_1": AGENT_1}
 CHECKER_MODEL = "claude-opus-5"
 
 
@@ -33,8 +31,8 @@ def _section(title: str) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--agent", choices=list(AGENTS), default="agent_base")
-    parser.add_argument("--task", choices=["weather", "return_policy"], required=True)
+    parser.add_argument("--version", choices=api.list_versions(), default="version_base")
+    parser.add_argument("--task", choices=api.list_tasks(), required=True)
     parser.add_argument("--model", default="claude-opus-5")
     parser.add_argument(
         "--tool-mode", choices=list(weather.TOOL_MODES), default="silent",
@@ -42,33 +40,11 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    agent = AGENTS[args.agent]
-
-    if args.task == "weather":
-        user_message = weather.QUESTION
-        tools = [weather.GET_WEATHER_TOOL]
-        tool_impls = weather.build_tool_impls(args.tool_mode)
-        config = {
-            "agent": agent.name, "model": args.model, "task": "weather",
-            "tool_mode": args.tool_mode, "question": weather.QUESTION,
-            "tool": weather.GET_WEATHER_TOOL,
-        }
-        label_parts = ["weather", args.tool_mode, agent.name, args.model]
-    else:
-        user_message = return_policy.build_user_message()
-        tools = None
-        tool_impls = None
-        config = {
-            "agent": agent.name, "model": args.model, "task": "return_policy",
-            "question": return_policy.QUESTION,
-            "planted_gap_description": return_policy.PLANTED_GAP_DESCRIPTION,
-            "knowledge_base": return_policy.KNOWLEDGE_BASE,
-        }
-        label_parts = ["return-policy", agent.name, args.model]
-
-    _section(f"RUNNING agent={agent.name} task={args.task} model={args.model}"
-              + (f" tool_mode={args.tool_mode}" if args.task == "weather" else ""))
-    result = run_agent(agent, args.model, user_message, tools=tools, tool_impls=tool_impls)
+    _section(
+        f"RUNNING version={args.version} task={args.task} model={args.model}"
+        + (f" tool_mode={args.tool_mode}" if args.task == "weather" else "")
+    )
+    result = api.run(version=args.version, task=args.task, model=args.model, tool_mode=args.tool_mode)
 
     _section("RESULT")
     print(json.dumps(result, indent=2))
@@ -89,6 +65,15 @@ def main() -> None:
         print(json.dumps(checker_output, indent=2))
 
         extra = {"grounding": grounding, "checker": checker_output, "checker_model": CHECKER_MODEL}
+
+    label_parts = [args.task]
+    if args.task == "weather":
+        label_parts.append(args.tool_mode)
+    label_parts += [args.version, args.model]
+
+    config = {"version": args.version, "model": args.model, "task": args.task}
+    if args.task == "weather":
+        config["tool_mode"] = args.tool_mode
 
     run_dir = save_run(label_parts, config, {**result, **extra})
     print(f"\nSaved to: {run_dir.relative_to(run_dir.parent.parent)}")

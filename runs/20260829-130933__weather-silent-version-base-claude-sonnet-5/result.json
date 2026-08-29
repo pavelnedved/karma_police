@@ -1,0 +1,34 @@
+{
+  "agent": "agent_base",
+  "model": "claude-sonnet-5",
+  "rounds": [
+    {
+      "stop_reason": "tool_use",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": ""
+        },
+        {
+          "type": "tool_use",
+          "name": "get_weather",
+          "input": {
+            "city": "Chatham, NJ"
+          },
+          "id": "toolu_0157N7KiYbx7jbiVAu24a5XD"
+        }
+      ]
+    },
+    {
+      "stop_reason": "end_turn",
+      "content": [
+        {
+          "type": "text",
+          "text": "Today in Chatham, NJ, it's **71\u00b0F and partly cloudy** \u2014 a pretty mild, comfortable day overall. If you're heading out, it's a good idea to bring a light jacket in case of a breeze, but no major weather concerns to worry about!"
+        }
+      ]
+    }
+  ],
+  "final_text": "Today in Chatham, NJ, it's **71\u00b0F and partly cloudy** \u2014 a pretty mild, comfortable day overall. If you're heading out, it's a good idea to bring a light jacket in case of a breeze, but no major weather concerns to worry about!",
+  "hit_round_cap": false
+}
