@@ -1,0 +1,567 @@
+{
+  "timestamp": "20260829-211726",
+  "model": "claude-sonnet-5",
+  "trials": 5,
+  "cap": 40,
+  "optimal_moves": 8,
+  "success_rate": 1.0,
+  "avg_moves_successful": 12.0,
+  "avg_excess_successful": 4.0,
+  "results": [
+    {
+      "trial_id": 0,
+      "success": true,
+      "moves_used": 12,
+      "optimal_moves": 8,
+      "excess_moves": 4,
+      "hit_move_cap": false,
+      "num_api_rounds": 5,
+      "hit_api_round_cap": false,
+      "elapsed_seconds": 9.866503953933716,
+      "final_text": "Found the goal! I reached it at position (4,4) after navigating around a few obstacles in the maze.",
+      "move_history": [
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            1,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            3,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            4,
+            2
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            4,
+            3
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "goal",
+          "position_after": [
+            4,
+            4
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "trial_id": 1,
+      "success": true,
+      "moves_used": 10,
+      "optimal_moves": 8,
+      "excess_moves": 2,
+      "hit_move_cap": false,
+      "num_api_rounds": 11,
+      "hit_api_round_cap": false,
+      "elapsed_seconds": 12.429433107376099,
+      "final_text": "Found the goal! I reached it at what I tracked as position (4,4), after navigating right, up, right, right, up, up from the start.",
+      "move_history": [
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            1,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            3,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            4,
+            2
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            4,
+            3
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "goal",
+          "position_after": [
+            4,
+            4
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "trial_id": 2,
+      "success": true,
+      "moves_used": 12,
+      "optimal_moves": 8,
+      "excess_moves": 4,
+      "hit_move_cap": false,
+      "num_api_rounds": 6,
+      "hit_api_round_cap": false,
+      "elapsed_seconds": 13.693802833557129,
+      "final_text": "I found the goal! Starting from (0,0), I navigated through the grid (right, right, up, up, right, right, up, up) and reached the goal at what would be position (4,4). The maze is solved.",
+      "move_history": [
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            1,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            3,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            4,
+            2
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            4,
+            3
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "goal",
+          "position_after": [
+            4,
+            4
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "trial_id": 3,
+      "success": true,
+      "moves_used": 16,
+      "optimal_moves": 8,
+      "excess_moves": 8,
+      "hit_move_cap": false,
+      "num_api_rounds": 6,
+      "hit_api_round_cap": false,
+      "elapsed_seconds": 18.90870189666748,
+      "final_text": "I found the goal! The maze has been solved \u2014 I reached the goal by moving up from (4,3) to (4,4).",
+      "move_history": [
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            1,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            3,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            4,
+            2
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            4,
+            3
+          ]
+        },
+        {
+          "direction": "left",
+          "result": "obstacle",
+          "position_after": [
+            4,
+            3
+          ]
+        },
+        {
+          "direction": "left",
+          "result": "obstacle",
+          "position_after": [
+            4,
+            3
+          ]
+        },
+        {
+          "direction": "left",
+          "result": "obstacle",
+          "position_after": [
+            4,
+            3
+          ]
+        },
+        {
+          "direction": "left",
+          "result": "obstacle",
+          "position_after": [
+            4,
+            3
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "goal",
+          "position_after": [
+            4,
+            4
+          ]
+        }
+      ],
+      "error": null
+    },
+    {
+      "trial_id": 4,
+      "success": true,
+      "moves_used": 10,
+      "optimal_moves": 8,
+      "excess_moves": 2,
+      "hit_move_cap": false,
+      "num_api_rounds": 11,
+      "hit_api_round_cap": false,
+      "elapsed_seconds": 17.013139963150024,
+      "final_text": "Found the goal! I reached it by navigating right and up through the grid, avoiding a couple of obstacles along the way (moves: right, right, [obstacle], up, [obstacle right], up, right, right, up, up \u2192 goal at position (4,4)).",
+      "move_history": [
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            1,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            3,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            4,
+            2
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            4,
+            3
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "goal",
+          "position_after": [
+            4,
+            4
+          ]
+        }
+      ],
+      "error": null
+    }
+  ]
+}

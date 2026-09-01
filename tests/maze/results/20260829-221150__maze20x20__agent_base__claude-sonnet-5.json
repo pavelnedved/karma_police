@@ -1,0 +1,2956 @@
+{
+  "timestamp": "20260829-221150",
+  "model": "claude-sonnet-5",
+  "trials": 3,
+  "cap": 250,
+  "maze": {
+    "width": 20,
+    "height": 20,
+    "seed": 42,
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      10,
+      1
+    ],
+    "optimal_moves": 35,
+    "num_dead_ends": 48
+  },
+  "success_rate": 0.6666666666666666,
+  "avg_moves": 64.5,
+  "avg_new_progress": 35.0,
+  "avg_backtrack": 1.0,
+  "avg_first_time_blocked": 28.0,
+  "avg_repeat_blocked": 0.5,
+  "avg_necessary_exploration_moves": 28.0,
+  "avg_avoidable_waste_moves": 1.5,
+  "results": [
+    {
+      "trial_id": 0,
+      "success": false,
+      "moves_used": 54,
+      "hit_move_cap": false,
+      "hit_api_round_cap": false,
+      "elapsed_seconds": 149.49638080596924,
+      "final_text": "",
+      "last_round_stop_reason": "max_tokens",
+      "last_round_block_types": [
+        "thinking"
+      ],
+      "round_texts": [
+        "I'll start exploring the maze systematically, keeping track of my position and what I've discovered.",
+        "At (0,0), right is blocked. Let me try other directions.",
+        "Now at (0,2). Continuing exploration."
+      ],
+      "round_thinking": [],
+      "round_block_type_counts": {
+        "thinking": 36,
+        "text": 3,
+        "tool_use": 54
+      },
+      "error": null,
+      "distinct_cells_visited": 31,
+      "audit": {
+        "total_moves": 54,
+        "optimal_moves": 35,
+        "new_progress": 30,
+        "backtrack": 0,
+        "first_time_blocked": 23,
+        "repeat_blocked": 1,
+        "immediate_repeats": 1,
+        "delayed_repeats": 0,
+        "path_efficiency": 1.1666666666666667,
+        "avoidable_waste_moves": 1,
+        "necessary_exploration_moves": 23
+      },
+      "repeat_examples": [
+        {
+          "position": [
+            0,
+            0
+          ],
+          "direction": "right",
+          "first_tried_at_move": 0,
+          "repeated_at_move": 1,
+          "gap": 1
+        }
+      ],
+      "move_history": [
+        {
+          "move_index": 0,
+          "direction": "right",
+          "position_before": [
+            0,
+            0
+          ],
+          "result": "obstacle",
+          "position_after": [
+            0,
+            0
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 1,
+          "direction": "right",
+          "position_before": [
+            0,
+            0
+          ],
+          "result": "obstacle",
+          "position_after": [
+            0,
+            0
+          ],
+          "repeat_of_move_index": 0,
+          "category": "repeat_blocked"
+        },
+        {
+          "move_index": 2,
+          "direction": "up",
+          "position_before": [
+            0,
+            0
+          ],
+          "result": "empty",
+          "position_after": [
+            0,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 3,
+          "direction": "up",
+          "position_before": [
+            0,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            0,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 4,
+          "direction": "right",
+          "position_before": [
+            0,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 5,
+          "direction": "right",
+          "position_before": [
+            1,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            1,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 6,
+          "direction": "up",
+          "position_before": [
+            1,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 7,
+          "direction": "right",
+          "position_before": [
+            1,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            1,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 8,
+          "direction": "up",
+          "position_before": [
+            1,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            4
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 9,
+          "direction": "up",
+          "position_before": [
+            1,
+            4
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 10,
+          "direction": "right",
+          "position_before": [
+            1,
+            5
+          ],
+          "result": "empty",
+          "position_after": [
+            2,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 11,
+          "direction": "right",
+          "position_before": [
+            2,
+            5
+          ],
+          "result": "obstacle",
+          "position_after": [
+            2,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 12,
+          "direction": "up",
+          "position_before": [
+            2,
+            5
+          ],
+          "result": "empty",
+          "position_after": [
+            2,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 13,
+          "direction": "up",
+          "position_before": [
+            2,
+            6
+          ],
+          "result": "obstacle",
+          "position_after": [
+            2,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 14,
+          "direction": "right",
+          "position_before": [
+            2,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            3,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 15,
+          "direction": "right",
+          "position_before": [
+            3,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            4,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 16,
+          "direction": "right",
+          "position_before": [
+            4,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            5,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 17,
+          "direction": "right",
+          "position_before": [
+            5,
+            6
+          ],
+          "result": "obstacle",
+          "position_after": [
+            5,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 18,
+          "direction": "up",
+          "position_before": [
+            5,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            5,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 19,
+          "direction": "up",
+          "position_before": [
+            5,
+            7
+          ],
+          "result": "obstacle",
+          "position_after": [
+            5,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 20,
+          "direction": "right",
+          "position_before": [
+            5,
+            7
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 21,
+          "direction": "right",
+          "position_before": [
+            6,
+            7
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 22,
+          "direction": "up",
+          "position_before": [
+            6,
+            7
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 23,
+          "direction": "down",
+          "position_before": [
+            6,
+            7
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 24,
+          "direction": "right",
+          "position_before": [
+            6,
+            6
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 25,
+          "direction": "down",
+          "position_before": [
+            6,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 26,
+          "direction": "right",
+          "position_before": [
+            6,
+            5
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 27,
+          "direction": "down",
+          "position_before": [
+            6,
+            5
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            4
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 28,
+          "direction": "right",
+          "position_before": [
+            6,
+            4
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            4
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 29,
+          "direction": "down",
+          "position_before": [
+            6,
+            4
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 30,
+          "direction": "right",
+          "position_before": [
+            6,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 31,
+          "direction": "down",
+          "position_before": [
+            6,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 32,
+          "direction": "right",
+          "position_before": [
+            6,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 33,
+          "direction": "down",
+          "position_before": [
+            6,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 34,
+          "direction": "right",
+          "position_before": [
+            6,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            7,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 35,
+          "direction": "right",
+          "position_before": [
+            7,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            8,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 36,
+          "direction": "right",
+          "position_before": [
+            8,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            8,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 37,
+          "direction": "up",
+          "position_before": [
+            8,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            8,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 38,
+          "direction": "up",
+          "position_before": [
+            8,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            8,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 39,
+          "direction": "right",
+          "position_before": [
+            8,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            9,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 40,
+          "direction": "right",
+          "position_before": [
+            9,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            9,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 41,
+          "direction": "up",
+          "position_before": [
+            9,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            9,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 42,
+          "direction": "right",
+          "position_before": [
+            9,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            10,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 43,
+          "direction": "up",
+          "position_before": [
+            10,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            10,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 44,
+          "direction": "right",
+          "position_before": [
+            10,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            11,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 45,
+          "direction": "right",
+          "position_before": [
+            11,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            12,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 46,
+          "direction": "right",
+          "position_before": [
+            12,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            13,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 47,
+          "direction": "right",
+          "position_before": [
+            13,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 48,
+          "direction": "up",
+          "position_before": [
+            13,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 49,
+          "direction": "down",
+          "position_before": [
+            13,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            13,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 50,
+          "direction": "right",
+          "position_before": [
+            13,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 51,
+          "direction": "down",
+          "position_before": [
+            13,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            13,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 52,
+          "direction": "right",
+          "position_before": [
+            13,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 53,
+          "direction": "down",
+          "position_before": [
+            13,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        }
+      ]
+    },
+    {
+      "trial_id": 1,
+      "success": true,
+      "moves_used": 65,
+      "hit_move_cap": false,
+      "hit_api_round_cap": false,
+      "elapsed_seconds": 83.02061581611633,
+      "final_text": "I found the goal! The maze has been solved.",
+      "last_round_stop_reason": "end_turn",
+      "last_round_block_types": [
+        "text"
+      ],
+      "round_texts": [
+        "I'll start exploring the maze systematically, keeping track of my position and what I've discovered.",
+        "Position tracking: Started at (0,0). Right\u2192obstacle (still at 0,0). Up\u2192empty (now at 0,1).",
+        "Now at (0,2).",
+        "Now at (1,2).",
+        "Now at (1,3).",
+        "Now at (1,4).",
+        "Now at (1,5).",
+        "Now at (2,5).",
+        "Now at (2,6).",
+        "Now at (3,6).",
+        "Now at (4,6).",
+        "Now at (5,6).",
+        "Now at (5,7).",
+        "Now at (6,6).",
+        "Now at (6,5).",
+        "Now at (6,4).",
+        "Now at (6,3).",
+        "Now at (6,2).",
+        "Now at (6,1).",
+        "Now back at (6,1). Let me try down.",
+        "Now at (7,1). Let me explore from here.",
+        "Now at (8,1).",
+        "Now at (8,2).",
+        "Now at (9,2).",
+        "Now at (9,3).",
+        "Now at (10,3).",
+        "Now at (11,3).",
+        "Now at (12,3).",
+        "Now at (13,3).",
+        "Now at (13,2).",
+        "Now at (13,1).",
+        "Now at (12,1).",
+        "Now at (11,1).",
+        "Now at (11,0).",
+        "Now at (10,0).",
+        "I found the goal! The maze has been solved."
+      ],
+      "round_thinking": [],
+      "round_block_type_counts": {
+        "thinking": 29,
+        "text": 36,
+        "tool_use": 65
+      },
+      "error": null,
+      "distinct_cells_visited": 36,
+      "audit": {
+        "total_moves": 65,
+        "optimal_moves": 35,
+        "new_progress": 35,
+        "backtrack": 2,
+        "first_time_blocked": 28,
+        "repeat_blocked": 0,
+        "immediate_repeats": 0,
+        "delayed_repeats": 0,
+        "path_efficiency": 1.0,
+        "avoidable_waste_moves": 2,
+        "necessary_exploration_moves": 28
+      },
+      "repeat_examples": [],
+      "move_history": [
+        {
+          "move_index": 0,
+          "direction": "right",
+          "position_before": [
+            0,
+            0
+          ],
+          "result": "obstacle",
+          "position_after": [
+            0,
+            0
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 1,
+          "direction": "up",
+          "position_before": [
+            0,
+            0
+          ],
+          "result": "empty",
+          "position_after": [
+            0,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 2,
+          "direction": "up",
+          "position_before": [
+            0,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            0,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 3,
+          "direction": "up",
+          "position_before": [
+            0,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            0,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 4,
+          "direction": "right",
+          "position_before": [
+            0,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 5,
+          "direction": "right",
+          "position_before": [
+            1,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            1,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 6,
+          "direction": "up",
+          "position_before": [
+            1,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 7,
+          "direction": "up",
+          "position_before": [
+            1,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            4
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 8,
+          "direction": "up",
+          "position_before": [
+            1,
+            4
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 9,
+          "direction": "up",
+          "position_before": [
+            1,
+            5
+          ],
+          "result": "obstacle",
+          "position_after": [
+            1,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 10,
+          "direction": "right",
+          "position_before": [
+            1,
+            5
+          ],
+          "result": "empty",
+          "position_after": [
+            2,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 11,
+          "direction": "right",
+          "position_before": [
+            2,
+            5
+          ],
+          "result": "obstacle",
+          "position_after": [
+            2,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 12,
+          "direction": "up",
+          "position_before": [
+            2,
+            5
+          ],
+          "result": "empty",
+          "position_after": [
+            2,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 13,
+          "direction": "up",
+          "position_before": [
+            2,
+            6
+          ],
+          "result": "obstacle",
+          "position_after": [
+            2,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 14,
+          "direction": "right",
+          "position_before": [
+            2,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            3,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 15,
+          "direction": "right",
+          "position_before": [
+            3,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            4,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 16,
+          "direction": "right",
+          "position_before": [
+            4,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            5,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 17,
+          "direction": "right",
+          "position_before": [
+            5,
+            6
+          ],
+          "result": "obstacle",
+          "position_after": [
+            5,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 18,
+          "direction": "up",
+          "position_before": [
+            5,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            5,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 19,
+          "direction": "up",
+          "position_before": [
+            5,
+            7
+          ],
+          "result": "obstacle",
+          "position_after": [
+            5,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 20,
+          "direction": "right",
+          "position_before": [
+            5,
+            7
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 21,
+          "direction": "right",
+          "position_before": [
+            6,
+            7
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 22,
+          "direction": "up",
+          "position_before": [
+            6,
+            7
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 23,
+          "direction": "down",
+          "position_before": [
+            6,
+            7
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 24,
+          "direction": "right",
+          "position_before": [
+            6,
+            6
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 25,
+          "direction": "down",
+          "position_before": [
+            6,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 26,
+          "direction": "right",
+          "position_before": [
+            6,
+            5
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 27,
+          "direction": "down",
+          "position_before": [
+            6,
+            5
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            4
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 28,
+          "direction": "right",
+          "position_before": [
+            6,
+            4
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            4
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 29,
+          "direction": "down",
+          "position_before": [
+            6,
+            4
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 30,
+          "direction": "right",
+          "position_before": [
+            6,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 31,
+          "direction": "down",
+          "position_before": [
+            6,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 32,
+          "direction": "right",
+          "position_before": [
+            6,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 33,
+          "direction": "down",
+          "position_before": [
+            6,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 34,
+          "direction": "right",
+          "position_before": [
+            6,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            7,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 35,
+          "direction": "left",
+          "position_before": [
+            7,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "backtrack"
+        },
+        {
+          "move_index": 36,
+          "direction": "down",
+          "position_before": [
+            6,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 37,
+          "direction": "left",
+          "position_before": [
+            6,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 38,
+          "direction": "right",
+          "position_before": [
+            6,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            7,
+            1
+          ],
+          "repeat_of_move_index": 34,
+          "category": "backtrack"
+        },
+        {
+          "move_index": 39,
+          "direction": "right",
+          "position_before": [
+            7,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            8,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 40,
+          "direction": "right",
+          "position_before": [
+            8,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            8,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 41,
+          "direction": "up",
+          "position_before": [
+            8,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            8,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 42,
+          "direction": "up",
+          "position_before": [
+            8,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            8,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 43,
+          "direction": "right",
+          "position_before": [
+            8,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            9,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 44,
+          "direction": "right",
+          "position_before": [
+            9,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            9,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 45,
+          "direction": "up",
+          "position_before": [
+            9,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            9,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 46,
+          "direction": "up",
+          "position_before": [
+            9,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            9,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 47,
+          "direction": "right",
+          "position_before": [
+            9,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            10,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 48,
+          "direction": "right",
+          "position_before": [
+            10,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            11,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 49,
+          "direction": "right",
+          "position_before": [
+            11,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            12,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 50,
+          "direction": "right",
+          "position_before": [
+            12,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            13,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 51,
+          "direction": "right",
+          "position_before": [
+            13,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 52,
+          "direction": "up",
+          "position_before": [
+            13,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 53,
+          "direction": "down",
+          "position_before": [
+            13,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            13,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 54,
+          "direction": "right",
+          "position_before": [
+            13,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 55,
+          "direction": "down",
+          "position_before": [
+            13,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            13,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 56,
+          "direction": "right",
+          "position_before": [
+            13,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 57,
+          "direction": "down",
+          "position_before": [
+            13,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 58,
+          "direction": "left",
+          "position_before": [
+            13,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            12,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 59,
+          "direction": "left",
+          "position_before": [
+            12,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            11,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 60,
+          "direction": "left",
+          "position_before": [
+            11,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            11,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 61,
+          "direction": "down",
+          "position_before": [
+            11,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            11,
+            0
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 62,
+          "direction": "left",
+          "position_before": [
+            11,
+            0
+          ],
+          "result": "empty",
+          "position_after": [
+            10,
+            0
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 63,
+          "direction": "left",
+          "position_before": [
+            10,
+            0
+          ],
+          "result": "obstacle",
+          "position_after": [
+            10,
+            0
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 64,
+          "direction": "up",
+          "position_before": [
+            10,
+            0
+          ],
+          "result": "goal",
+          "position_after": [
+            10,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        }
+      ]
+    },
+    {
+      "trial_id": 2,
+      "success": true,
+      "moves_used": 64,
+      "hit_move_cap": false,
+      "hit_api_round_cap": false,
+      "elapsed_seconds": 52.46209192276001,
+      "final_text": "I found the goal! The maze has been solved.",
+      "last_round_stop_reason": "end_turn",
+      "last_round_block_types": [
+        "text"
+      ],
+      "round_texts": [
+        "I'll start exploring the maze systematically, keeping track of my position and what I've discovered.",
+        "I found the goal! The maze has been solved."
+      ],
+      "round_thinking": [],
+      "round_block_type_counts": {
+        "thinking": 33,
+        "text": 2,
+        "tool_use": 64
+      },
+      "error": null,
+      "distinct_cells_visited": 36,
+      "audit": {
+        "total_moves": 64,
+        "optimal_moves": 35,
+        "new_progress": 35,
+        "backtrack": 0,
+        "first_time_blocked": 28,
+        "repeat_blocked": 1,
+        "immediate_repeats": 1,
+        "delayed_repeats": 0,
+        "path_efficiency": 1.0,
+        "avoidable_waste_moves": 1,
+        "necessary_exploration_moves": 28
+      },
+      "repeat_examples": [
+        {
+          "position": [
+            0,
+            0
+          ],
+          "direction": "right",
+          "first_tried_at_move": 0,
+          "repeated_at_move": 1,
+          "gap": 1
+        }
+      ],
+      "move_history": [
+        {
+          "move_index": 0,
+          "direction": "right",
+          "position_before": [
+            0,
+            0
+          ],
+          "result": "obstacle",
+          "position_after": [
+            0,
+            0
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 1,
+          "direction": "right",
+          "position_before": [
+            0,
+            0
+          ],
+          "result": "obstacle",
+          "position_after": [
+            0,
+            0
+          ],
+          "repeat_of_move_index": 0,
+          "category": "repeat_blocked"
+        },
+        {
+          "move_index": 2,
+          "direction": "up",
+          "position_before": [
+            0,
+            0
+          ],
+          "result": "empty",
+          "position_after": [
+            0,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 3,
+          "direction": "up",
+          "position_before": [
+            0,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            0,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 4,
+          "direction": "right",
+          "position_before": [
+            0,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 5,
+          "direction": "up",
+          "position_before": [
+            1,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 6,
+          "direction": "right",
+          "position_before": [
+            1,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            1,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 7,
+          "direction": "up",
+          "position_before": [
+            1,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            4
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 8,
+          "direction": "up",
+          "position_before": [
+            1,
+            4
+          ],
+          "result": "empty",
+          "position_after": [
+            1,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 9,
+          "direction": "right",
+          "position_before": [
+            1,
+            5
+          ],
+          "result": "empty",
+          "position_after": [
+            2,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 10,
+          "direction": "right",
+          "position_before": [
+            2,
+            5
+          ],
+          "result": "obstacle",
+          "position_after": [
+            2,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 11,
+          "direction": "up",
+          "position_before": [
+            2,
+            5
+          ],
+          "result": "empty",
+          "position_after": [
+            2,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 12,
+          "direction": "up",
+          "position_before": [
+            2,
+            6
+          ],
+          "result": "obstacle",
+          "position_after": [
+            2,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 13,
+          "direction": "right",
+          "position_before": [
+            2,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            3,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 14,
+          "direction": "right",
+          "position_before": [
+            3,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            4,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 15,
+          "direction": "up",
+          "position_before": [
+            4,
+            6
+          ],
+          "result": "obstacle",
+          "position_after": [
+            4,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 16,
+          "direction": "right",
+          "position_before": [
+            4,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            5,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 17,
+          "direction": "down",
+          "position_before": [
+            5,
+            6
+          ],
+          "result": "obstacle",
+          "position_after": [
+            5,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 18,
+          "direction": "right",
+          "position_before": [
+            5,
+            6
+          ],
+          "result": "obstacle",
+          "position_after": [
+            5,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 19,
+          "direction": "up",
+          "position_before": [
+            5,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            5,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 20,
+          "direction": "up",
+          "position_before": [
+            5,
+            7
+          ],
+          "result": "obstacle",
+          "position_after": [
+            5,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 21,
+          "direction": "right",
+          "position_before": [
+            5,
+            7
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 22,
+          "direction": "right",
+          "position_before": [
+            6,
+            7
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 23,
+          "direction": "up",
+          "position_before": [
+            6,
+            7
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            7
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 24,
+          "direction": "down",
+          "position_before": [
+            6,
+            7
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 25,
+          "direction": "right",
+          "position_before": [
+            6,
+            6
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            6
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 26,
+          "direction": "down",
+          "position_before": [
+            6,
+            6
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 27,
+          "direction": "right",
+          "position_before": [
+            6,
+            5
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            5
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 28,
+          "direction": "down",
+          "position_before": [
+            6,
+            5
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            4
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 29,
+          "direction": "right",
+          "position_before": [
+            6,
+            4
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            4
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 30,
+          "direction": "down",
+          "position_before": [
+            6,
+            4
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 31,
+          "direction": "right",
+          "position_before": [
+            6,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 32,
+          "direction": "down",
+          "position_before": [
+            6,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 33,
+          "direction": "right",
+          "position_before": [
+            6,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            6,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 34,
+          "direction": "down",
+          "position_before": [
+            6,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            6,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 35,
+          "direction": "right",
+          "position_before": [
+            6,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            7,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 36,
+          "direction": "down",
+          "position_before": [
+            7,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            7,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 37,
+          "direction": "right",
+          "position_before": [
+            7,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            8,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 38,
+          "direction": "up",
+          "position_before": [
+            8,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            8,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 39,
+          "direction": "up",
+          "position_before": [
+            8,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            8,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 40,
+          "direction": "right",
+          "position_before": [
+            8,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            9,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 41,
+          "direction": "right",
+          "position_before": [
+            9,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            9,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 42,
+          "direction": "up",
+          "position_before": [
+            9,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            9,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 43,
+          "direction": "up",
+          "position_before": [
+            9,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            9,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 44,
+          "direction": "right",
+          "position_before": [
+            9,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            10,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 45,
+          "direction": "right",
+          "position_before": [
+            10,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            11,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 46,
+          "direction": "up",
+          "position_before": [
+            11,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            11,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 47,
+          "direction": "right",
+          "position_before": [
+            11,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            12,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 48,
+          "direction": "down",
+          "position_before": [
+            12,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            12,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 49,
+          "direction": "right",
+          "position_before": [
+            12,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            13,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 50,
+          "direction": "up",
+          "position_before": [
+            13,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 51,
+          "direction": "right",
+          "position_before": [
+            13,
+            3
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            3
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 52,
+          "direction": "down",
+          "position_before": [
+            13,
+            3
+          ],
+          "result": "empty",
+          "position_after": [
+            13,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 53,
+          "direction": "right",
+          "position_before": [
+            13,
+            2
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            2
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 54,
+          "direction": "down",
+          "position_before": [
+            13,
+            2
+          ],
+          "result": "empty",
+          "position_after": [
+            13,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 55,
+          "direction": "right",
+          "position_before": [
+            13,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 56,
+          "direction": "down",
+          "position_before": [
+            13,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            13,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 57,
+          "direction": "left",
+          "position_before": [
+            13,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            12,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 58,
+          "direction": "down",
+          "position_before": [
+            12,
+            1
+          ],
+          "result": "obstacle",
+          "position_after": [
+            12,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 59,
+          "direction": "left",
+          "position_before": [
+            12,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            11,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 60,
+          "direction": "down",
+          "position_before": [
+            11,
+            1
+          ],
+          "result": "empty",
+          "position_after": [
+            11,
+            0
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 61,
+          "direction": "left",
+          "position_before": [
+            11,
+            0
+          ],
+          "result": "empty",
+          "position_after": [
+            10,
+            0
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        },
+        {
+          "move_index": 62,
+          "direction": "left",
+          "position_before": [
+            10,
+            0
+          ],
+          "result": "obstacle",
+          "position_after": [
+            10,
+            0
+          ],
+          "repeat_of_move_index": null,
+          "category": "first_time_blocked"
+        },
+        {
+          "move_index": 63,
+          "direction": "up",
+          "position_before": [
+            10,
+            0
+          ],
+          "result": "goal",
+          "position_after": [
+            10,
+            1
+          ],
+          "repeat_of_move_index": null,
+          "category": "new_progress"
+        }
+      ]
+    }
+  ]
+}

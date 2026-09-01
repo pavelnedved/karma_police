@@ -1,0 +1,49 @@
+{
+  "timestamp": "20260829-145722",
+  "version": "version_1",
+  "model": "claude-sonnet-5",
+  "task_filter": "zebra_puzzle",
+  "limit": 3,
+  "elapsed_seconds": 20.817258834838867,
+  "summary": {
+    "zebra_puzzle": {
+      "n": 3,
+      "mean_score": 0.3333333333333333,
+      "exact_1.0_count": 1
+    }
+  },
+  "overall": {
+    "n": 3,
+    "mean_score": 0.3333333333333333,
+    "errors": 0
+  },
+  "results": [
+    {
+      "question_id": "bd14ba82d1fe813dcdf6c16f0f868e5f3fe92e4cee9cf5eb3fd5cb6f03d68517",
+      "task": "zebra_puzzle",
+      "ground_truth": "1, filmmaking, police-officer, journalist",
+      "final_text": "{\"observations\":[{\"id\":\"o1\",\"text\":\"The person who is a journalist is somewhere to the right of the person who watches adventure\"},{\"id\":\"o2\",\"text\":\"The person who is a police-officer is not the same as the person who likes filmmaking\"}],\"definitions\":[],\"assumptions\":[],\"backed_claims\":[{\"id\":\"c1\",\"text\":\"Since there are only 2 positions and the journalist must be strictly right of the adventure watcher, the adventure watcher is at position 1 and the journalist is at position 2.\",\"derived_from\":[\"o1\"],\"falsification_path\":\"If more than 2 positions existed or the constraint didn't require strict rightward placement, this deduction would fail; but with only 2 positions, position1<position2 is the only valid split.\"},{\"id\":\"c2\",\"text\":\"The person at position 1 (adventure watcher) is not the journalist, so they must be the police-officer.\",\"derived_from\":[\"c1\"],\"falsification_path\":\"If job assignment allowed position1 to also be journalist, this would be false, but only 2 jobs exist and journalist is fixed at position2.\"},{\"id\":\"c3\",\"text\":\"The person at position 2 is the journalist, watching thriller (the remaining genre), since adventure is taken by position1.\",\"derived_from\":[\"c1\"],\"falsification_path\":\"If genres were not exhaustive/unique, this could fail, but the puzzle states unique values per attribute.\"},{\"id\":\"c4\",\"text\":\"The police-officer (position1) does not like filmmaking, so must like collecting (the only remaining hobby).\",\"derived_from\":[\"o2\",\"c2\"],\"falsification_path\":\"If hobbies were not unique/exhaustive across 2 people, this would fail, but the puzzle guarantees uniqueness.\"},{\"id\":\"c5\",\"text\":\"The person at position 2 (journalist) must then have the remaining hobby, filmmaking.\",\"derived_from\":[\"c4\"],\"falsification_path\":\"If hobby assignment allowed both to share, this would fail, but uniqueness constraint holds.\"}],\"unverified_claims\":[],\"hypotheses\":[],\"conclusion\":{\"text\":\"Adventure watcher is at position 1; the journalist's hobby is filmmaking; the adventure watcher's job is police-officer; the thriller watcher's job is journalist.\",\"backed\":true,\"supporting_ids\":[\"c1\",\"c2\",\"c3\",\"c4\",\"c5\"]}}",
+      "scored_text": "Adventure watcher is at position 1; the journalist's hobby is filmmaking; the adventure watcher's job is police-officer; the thriller watcher's job is journalist.",
+      "score": 0.0,
+      "error": null
+    },
+    {
+      "question_id": "20d48b97e524cd64f82b0e4fb3c597a37bae1d9357e9b2c93aad96b4c70e098e",
+      "task": "zebra_puzzle",
+      "ground_truth": "freelancer, animation, thriller, 1",
+      "final_text": " {\"observations\": [{\"id\": \"o1\", \"text\": \"The person who is pakistani is on the immediate left or immediate right of the person who is a videographer\"}, {\"id\": \"o2\", \"text\": \"The person who is a videographer is somewhere to the left of the person who watches animation\"}], \"definitions\": [], \"assumptions\": [], \"backed_claims\": [{\"id\": \"c1\", \"text\": \"Since there are only 2 positions and the videographer must be left of the animation watcher, the videographer is at position 1 and the animation watcher is at position 2.\", \"derived_from\": [\"o2\"], \"falsification_path\": \"If there were more than 2 positions or if the videographer could be at position 2, this would fail; but with only 2 positions and videographer strictly left of animation watcher, position 1 is forced.\"}, {\"id\": \"c2\", \"text\": \"Person at position 1 watches thriller (the non-animation genre), since animation is at position 2.\", \"derived_from\": [\"c1\"], \"falsification_path\": \"If person 1 watched animation, it would contradict c1 that animation is at position 2 (only two genres exist).\"}, {\"id\": \"c3\", \"text\": \"Person at position 2 is a freelancer, since position 1 is videographer and there are only two job values.\", \"derived_from\": [\"c1\"], \"falsification_path\": \"If both positions had the same job value this would be false, but jobs are unique per person.\"}, {\"id\": \"c4\", \"text\": \"The pakistani person must be at position 2, since 'immediate left or right' of the videographer (position 1) can only be position 2 (position 1 itself is excluded as adjacency requires a different position).\", \"derived_from\": [\"o1\", \"c1\"], \"falsification_path\": \"If the pakistani person could be the videographer themself (position 1), this would fail, but adjacency implies a different position from the videographer's own position.\"}, {\"id\": \"c5\", \"text\": \"The pakistani person (position 2) has job freelancer and movie genre animation.\", \"derived_from\": [\"c4\", \"c3\", \"c1\"], \"falsification_path\": \"If position 2 person were not freelancer or not animation, this would fail, but c3 and c1 fix these values for position 2.\"}], \"unverified_claims\": [], \"hypotheses\": [], \"conclusion\": {\"text\": \"Job of pakistani = freelancer; Movie genre of pakistani = animation; Movie genre of position 1 = thriller; Videographer's position = 1\", \"backed\": true, \"supporting_ids\": [\"c1\", \"c2\", \"c3\", \"c4\", \"c5\"]}}",
+      "scored_text": "Job of pakistani = freelancer; Movie genre of pakistani = animation; Movie genre of position 1 = thriller; Videographer's position = 1",
+      "score": 0.0,
+      "error": null
+    },
+    {
+      "question_id": "b1b1678a4f290c8ab2b85f957a0cdbba93ef0c97d1e7ab4663e46e92ebac70e8",
+      "task": "zebra_puzzle",
+      "ground_truth": "architect, skiing, musical, 2",
+      "final_text": " {\"observations\":[{\"id\":\"o1\",\"text\":\"The person who is a chef is in an even position\"},{\"id\":\"o2\",\"text\":\"The person who plays snowboarding is somewhere to the right of the person who watches musical\"}],\"definitions\":[{\"id\":\"d1\",\"term\":\"Line positions\",\"text\":\"There are 2 people standing in a line, numbered 1 to 2 from left to right.\"}],\"assumptions\":[],\"backed_claims\":[{\"id\":\"b1\",\"text\":\"Since there are only positions 1 and 2, and the chef must be in an even position, the chef is in position 2, and the architect is in position 1.\",\"derived_from\":[\"o1\"],\"falsification_path\":\"If a valid arrangement existed with chef in position 1, this claim would be false, but only position 2 is even in a 2-person line.\"},{\"id\":\"b2\",\"text\":\"Since snowboarding must be strictly right of musical, and there are only 2 positions, musical must be at position 1 and snowboarding at position 2.\",\"derived_from\":[\"o2\"],\"falsification_path\":\"If musical could be at position 2 while snowboarding is also placeable to its right, this would fail; but position 2 is the last position, so musical cannot be there.\"},{\"id\":\"b3\",\"text\":\"Person at position 1 watches musical and plays skiing (since snowboarding is at position 2, the only other sport, skiing, must be at position 1).\",\"derived_from\":[\"b2\"],\"falsification_path\":\"If skiing were assigned to position 2 instead, this would contradict b2's placement of snowboarding at position 2.\"},{\"id\":\"b4\",\"text\":\"Person at position 1 (musical watcher) has job architect, per b1.\",\"derived_from\":[\"b1\",\"b3\"],\"falsification_path\":\"If position 1 were chef instead of architect, this would contradict b1.\"},{\"id\":\"b5\",\"text\":\"The job of the musical watcher is architect.\",\"derived_from\":[\"b4\"],\"falsification_path\":\"Would be false if the musical watcher were shown to be at position 2 (chef).\"},{\"id\":\"b6\",\"text\":\"The sport of the musical watcher is skiing.\",\"derived_from\":[\"b3\"],\"falsification_path\":\"Would be false if musical watcher were shown to play snowboarding.\"},{\"id\":\"b7\",\"text\":\"The movie genre of the skiing player is musical.\",\"derived_from\":[\"b3\"],\"falsification_path\":\"Would be false if skiing player were shown to watch fantasy instead.\"},{\"id\":\"b8\",\"text\":\"The snowboarding player is at position 2.\",\"derived_from\":[\"b2\"],\"falsification_path\":\"Would be false if snowboarding were shown at position 1.\"}],\"unverified_claims\":[],\"hypotheses\":[],\"conclusion\":{\"text\":\"1. Architect, 2. Skiing, 3. Musical, 4. Position 2\",\"backed\":true,\"supporting_ids\":[\"b5\",\"b6\",\"b7\",\"b8\"]}}",
+      "scored_text": "1. Architect, 2. Skiing, 3. Musical, 4. Position 2",
+      "score": 1.0,
+      "error": null
+    }
+  ]
+}

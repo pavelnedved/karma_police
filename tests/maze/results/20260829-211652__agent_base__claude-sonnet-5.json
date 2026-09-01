@@ -1,0 +1,107 @@
+{
+  "timestamp": "20260829-211652",
+  "model": "claude-sonnet-5",
+  "trials": 1,
+  "cap": 40,
+  "optimal_moves": 8,
+  "success_rate": 1.0,
+  "avg_moves_successful": 10.0,
+  "avg_excess_successful": 2.0,
+  "results": [
+    {
+      "trial_id": 0,
+      "success": true,
+      "moves_used": 10,
+      "optimal_moves": 8,
+      "excess_moves": 2,
+      "hit_move_cap": false,
+      "num_api_rounds": 11,
+      "hit_api_round_cap": false,
+      "elapsed_seconds": 12.770661115646362,
+      "final_text": "Found the goal! The maze is solved.",
+      "move_history": [
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            1,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            0
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "obstacle",
+          "position_after": [
+            2,
+            1
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            2,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            3,
+            2
+          ]
+        },
+        {
+          "direction": "right",
+          "result": "empty",
+          "position_after": [
+            4,
+            2
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "empty",
+          "position_after": [
+            4,
+            3
+          ]
+        },
+        {
+          "direction": "up",
+          "result": "goal",
+          "position_after": [
+            4,
+            4
+          ]
+        }
+      ],
+      "error": null
+    }
+  ]
+}
